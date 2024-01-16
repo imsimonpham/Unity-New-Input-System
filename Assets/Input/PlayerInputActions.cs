@@ -25,13 +25,283 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""4c182e77-5d2d-4fc8-8e88-d13e3b8d5f62"",
+            ""id"": ""03c186fe-5ae9-4057-922b-c1459aaeab9c"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""ChangeColor"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ecd7294-68b5-42ef-9c47-e937409f3fcf"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Rotate"",
                     ""type"": ""Value"",
-                    ""id"": ""9c9339cd-b37f-4fdc-8140-6176adc0cefd"",
+                    ""id"": ""79e25c35-1f6b-4e7b-9c5c-ced4d9110a44"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SwitchToDriving"",
+                    ""type"": ""Button"",
+                    ""id"": ""694f9185-b1a4-4a5d-8814-4a17f2f94c3c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""16ecee49-2d0f-42cb-bbf4-41e645e7b830"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeColor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""AD"",
+                    ""id"": ""3f5c7076-5b60-4efa-9f25-132b44297b2f"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": ""Invert"",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""ccfd9897-d366-4a01-ba30-9e13bf27fa54"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""1fa0f7d0-ab73-4c7d-b350-6d381dfa255d"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Arrows"",
+                    ""id"": ""1b8c4927-8a6e-4544-a1cb-bf82d599dafe"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": ""Invert"",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""8d36ecc0-bb4d-4e0e-be69-6a9e877f3373"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""5ef27008-27d3-4a13-b3f0-a5107b33bd7b"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4bbbb17a-fc02-4068-8b1c-e4e9eefcefe1"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchToDriving"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Vehicle"",
+            ""id"": ""b81c917c-d31f-43b6-bdf2-7486f8d85421"",
+            ""actions"": [
+                {
+                    ""name"": ""Drive"",
+                    ""type"": ""Value"",
+                    ""id"": ""bec1c2af-cdf6-4a28-a549-1adf7662a5f6"",
                     ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SwitchToPlayer"",
+                    ""type"": ""Button"",
+                    ""id"": ""7d4f1d4d-4db5-4dc2-8e80-a8fa2407a466"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""9ceb0cf4-764d-475b-8677-e6a1b631466f"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""181167c8-bfdc-4876-b32b-daee29c32220"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d0acc4be-9ecc-4ef2-8dae-6f6cc5368cd7"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""9fe1fa7e-82a0-4d4e-8351-cc3e9af05d54"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""f6af75a5-7f22-495e-b378-783ebdcf4404"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Arrows"",
+                    ""id"": ""4a5c3942-56d3-4b2c-bcb4-60287d1e7309"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""4a378806-4d56-46b6-bae7-1d5e4dfcf597"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""75a11a8f-f46d-4fe6-8741-38f17f6871a2"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""a94a199d-82fd-4c54-9284-25a9164340f2"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""c83d7608-cf63-41c0-b711-e696bbf9bbf9"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aec51e22-08e5-491f-97f4-e0a2e8158a8f"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchToPlayer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Ball"",
+            ""id"": ""59537ba6-3553-4c59-8eab-d6614ca0d239"",
+            ""actions"": [
+                {
+                    ""name"": ""Bounce"",
+                    ""type"": ""Value"",
+                    ""id"": ""4aa21972-071d-4a7e-b260-9d6dd278f57c"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -39,59 +309,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""10b663e4-5451-47aa-a819-6fb840430af7"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
+                    ""name"": """",
+                    ""id"": ""babdb5c9-dd62-4955-96b5-a746e142884e"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": ""Hold(pressPoint=0.2)"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
+                    ""action"": ""Bounce"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""ecf91c5b-0d5b-4c52-9e43-5aaf1b6bb5ed"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""0d6220ab-3ab4-456c-951a-18cf287d5f53"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""84e8d501-f1fc-490b-bb9e-5e3a25a81721"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""f26665c9-0eed-44a3-92b0-8230f53c68e1"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -100,7 +326,16 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
+        m_Player_ChangeColor = m_Player.FindAction("ChangeColor", throwIfNotFound: true);
+        m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_SwitchToDriving = m_Player.FindAction("SwitchToDriving", throwIfNotFound: true);
+        // Vehicle
+        m_Vehicle = asset.FindActionMap("Vehicle", throwIfNotFound: true);
+        m_Vehicle_Drive = m_Vehicle.FindAction("Drive", throwIfNotFound: true);
+        m_Vehicle_SwitchToPlayer = m_Vehicle.FindAction("SwitchToPlayer", throwIfNotFound: true);
+        // Ball
+        m_Ball = asset.FindActionMap("Ball", throwIfNotFound: true);
+        m_Ball_Bounce = m_Ball.FindAction("Bounce", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -162,12 +397,16 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Movement;
+    private readonly InputAction m_Player_ChangeColor;
+    private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_SwitchToDriving;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Player_Movement;
+        public InputAction @ChangeColor => m_Wrapper.m_Player_ChangeColor;
+        public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @SwitchToDriving => m_Wrapper.m_Player_SwitchToDriving;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -177,16 +416,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
+            @ChangeColor.started += instance.OnChangeColor;
+            @ChangeColor.performed += instance.OnChangeColor;
+            @ChangeColor.canceled += instance.OnChangeColor;
+            @Rotate.started += instance.OnRotate;
+            @Rotate.performed += instance.OnRotate;
+            @Rotate.canceled += instance.OnRotate;
+            @SwitchToDriving.started += instance.OnSwitchToDriving;
+            @SwitchToDriving.performed += instance.OnSwitchToDriving;
+            @SwitchToDriving.canceled += instance.OnSwitchToDriving;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
+            @ChangeColor.started -= instance.OnChangeColor;
+            @ChangeColor.performed -= instance.OnChangeColor;
+            @ChangeColor.canceled -= instance.OnChangeColor;
+            @Rotate.started -= instance.OnRotate;
+            @Rotate.performed -= instance.OnRotate;
+            @Rotate.canceled -= instance.OnRotate;
+            @SwitchToDriving.started -= instance.OnSwitchToDriving;
+            @SwitchToDriving.performed -= instance.OnSwitchToDriving;
+            @SwitchToDriving.canceled -= instance.OnSwitchToDriving;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -204,8 +455,119 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Vehicle
+    private readonly InputActionMap m_Vehicle;
+    private List<IVehicleActions> m_VehicleActionsCallbackInterfaces = new List<IVehicleActions>();
+    private readonly InputAction m_Vehicle_Drive;
+    private readonly InputAction m_Vehicle_SwitchToPlayer;
+    public struct VehicleActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public VehicleActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Drive => m_Wrapper.m_Vehicle_Drive;
+        public InputAction @SwitchToPlayer => m_Wrapper.m_Vehicle_SwitchToPlayer;
+        public InputActionMap Get() { return m_Wrapper.m_Vehicle; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(VehicleActions set) { return set.Get(); }
+        public void AddCallbacks(IVehicleActions instance)
+        {
+            if (instance == null || m_Wrapper.m_VehicleActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_VehicleActionsCallbackInterfaces.Add(instance);
+            @Drive.started += instance.OnDrive;
+            @Drive.performed += instance.OnDrive;
+            @Drive.canceled += instance.OnDrive;
+            @SwitchToPlayer.started += instance.OnSwitchToPlayer;
+            @SwitchToPlayer.performed += instance.OnSwitchToPlayer;
+            @SwitchToPlayer.canceled += instance.OnSwitchToPlayer;
+        }
+
+        private void UnregisterCallbacks(IVehicleActions instance)
+        {
+            @Drive.started -= instance.OnDrive;
+            @Drive.performed -= instance.OnDrive;
+            @Drive.canceled -= instance.OnDrive;
+            @SwitchToPlayer.started -= instance.OnSwitchToPlayer;
+            @SwitchToPlayer.performed -= instance.OnSwitchToPlayer;
+            @SwitchToPlayer.canceled -= instance.OnSwitchToPlayer;
+        }
+
+        public void RemoveCallbacks(IVehicleActions instance)
+        {
+            if (m_Wrapper.m_VehicleActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IVehicleActions instance)
+        {
+            foreach (var item in m_Wrapper.m_VehicleActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_VehicleActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public VehicleActions @Vehicle => new VehicleActions(this);
+
+    // Ball
+    private readonly InputActionMap m_Ball;
+    private List<IBallActions> m_BallActionsCallbackInterfaces = new List<IBallActions>();
+    private readonly InputAction m_Ball_Bounce;
+    public struct BallActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public BallActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Bounce => m_Wrapper.m_Ball_Bounce;
+        public InputActionMap Get() { return m_Wrapper.m_Ball; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(BallActions set) { return set.Get(); }
+        public void AddCallbacks(IBallActions instance)
+        {
+            if (instance == null || m_Wrapper.m_BallActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_BallActionsCallbackInterfaces.Add(instance);
+            @Bounce.started += instance.OnBounce;
+            @Bounce.performed += instance.OnBounce;
+            @Bounce.canceled += instance.OnBounce;
+        }
+
+        private void UnregisterCallbacks(IBallActions instance)
+        {
+            @Bounce.started -= instance.OnBounce;
+            @Bounce.performed -= instance.OnBounce;
+            @Bounce.canceled -= instance.OnBounce;
+        }
+
+        public void RemoveCallbacks(IBallActions instance)
+        {
+            if (m_Wrapper.m_BallActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IBallActions instance)
+        {
+            foreach (var item in m_Wrapper.m_BallActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_BallActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public BallActions @Ball => new BallActions(this);
     public interface IPlayerActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnChangeColor(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
+        void OnSwitchToDriving(InputAction.CallbackContext context);
+    }
+    public interface IVehicleActions
+    {
+        void OnDrive(InputAction.CallbackContext context);
+        void OnSwitchToPlayer(InputAction.CallbackContext context);
+    }
+    public interface IBallActions
+    {
+        void OnBounce(InputAction.CallbackContext context);
     }
 }
