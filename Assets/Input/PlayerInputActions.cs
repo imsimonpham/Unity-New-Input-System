@@ -303,7 +303,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""id"": ""4aa21972-071d-4a7e-b260-9d6dd278f57c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold(pressPoint=0.2)"",
                     ""initialStateCheck"": true
                 }
             ],
@@ -312,7 +312,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""babdb5c9-dd62-4955-96b5-a746e142884e"",
                     ""path"": ""<Keyboard>/j"",
-                    ""interactions"": ""Hold(pressPoint=0.2)"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Bounce"",

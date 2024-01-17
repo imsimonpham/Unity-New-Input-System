@@ -22,7 +22,6 @@ public class Ball : MonoBehaviour
 
     private void Bounce_canceled(InputAction.CallbackContext context)
     {
-        Debug.Log(context.duration);
         float holdTime = (float)context.duration;
         if( holdTime < 0.5f )
         {
@@ -31,6 +30,6 @@ public class Ball : MonoBehaviour
         {
             holdTime = 2f;
         }
-        _rb.AddForce(new Vector3(0, 1, 0) * _jumpForce * holdTime, ForceMode.Force);
+        _rb.AddForce(Vector3.up * _jumpForce * holdTime, ForceMode.Force);
     }
 }
