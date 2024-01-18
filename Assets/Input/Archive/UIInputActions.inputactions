@@ -1,0 +1,34 @@
+{
+    "name": "UIInputActions",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "e43da454-9585-4f30-b5d7-34f142b8ff05",
+            "actions": [
+                {
+                    "name": "Charge",
+                    "type": "Button",
+                    "id": "390b9384-ffe1-4702-8e17-e2fae1e143b9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "13e70235-baa7-4cfc-9d28-3f79e0be433a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Charge",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
